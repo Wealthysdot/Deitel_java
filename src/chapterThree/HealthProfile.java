@@ -3,23 +3,30 @@ package chapterThree;
 public class HealthProfile {
     private String firstName;
     private String lastName;
-    private String gender;
-    private String dayOfBirth;
-    private String monthOfBirth;
-    private String yearOfBirth;
-    private int height;
-    private int weight;
+    private int dayOfBirth;
+    private int monthOfBirth;
+    private int yearOfBirth;
+    private double height;
+    private double weight;
+    private char gender;
 
-    public HealthProfile(String firstName, String lastName, String gender, String dayOfBirth, String monthOfBirth, String yearOfBirth, int height, int weight) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.dayOfBirth = dayOfBirth;
-        this.monthOfBirth = monthOfBirth;
-        this.yearOfBirth = yearOfBirth;
-        this.height = height;
-        this.weight = weight;
+//    public HealthProfile(String firstName, String lastName, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, int presentYear, double height, double weight) {
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//        this.gender = gender;
+//        this.dayOfBirth = dayOfBirth;
+//        this.monthOfBirth = monthOfBirth;
+//        this.yearOfBirth = yearOfBirth;
+//        this.height = height;
+//        this.weight = weight;
+//    }
+
+    public HealthProfile() {
+
     }
+
+//    public HealthProfile(String firstName) {
+//    }
 
 
     public String getFirstName() {
@@ -38,72 +45,100 @@ public class HealthProfile {
         this.lastName = lastName;
     }
 
-    public String getGender() {
-        return gender;
+    public void getGender() {
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGender(char gender) {
+        if (gender == 'F'){
+            System.out.println("Female");
+        }
+
+        if (gender == 'M'){
+            System.out.println("Male");
+        }
     }
 
-    public String getDayOfBirth() {
-        return dayOfBirth;
-    }
+//    public int getDayOfBirth() {
+//        return dayOfBirth;
+//    }
 
-    public void setDayOfBirth(String dayOfBirth) {
+    public void setDayOfBirth(int dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
     }
 
-    public String getMonthOfBirth() {
-        return monthOfBirth;
-    }
+//    public int getMonthOfBirth() {
+//        return monthOfBirth;
+//    }
 
-    public void setMonthOfBirth(String monthOfBirth) {
+    public void setMonthOfBirth(int monthOfBirth) {
         this.monthOfBirth = monthOfBirth;
     }
 
-    public String getYearOfBirth() {
-        return yearOfBirth;
-    }
+//    public int getYearOfBirth() {
+//        return yearOfBirth;
+//    }
 
-    public void setYearOfBirth(String yearOfBirth) {
+    public void setYearOfBirth(int yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    private int age;
-
-    public int getAge() {
-        age = 2020 - age;
-        return age;
+    public String DisplayDateOfBirth(){
+        return dayOfBirth + "/" + monthOfBirth + "/" + yearOfBirth;
     }
 
-    private int maximumHeartRate;
+    public int getAge() {
+        int presentYear = 2020;
+        return presentYear - yearOfBirth;
+    }
 
     public int getMaximumHeartRate() {
-        maximumHeartRate = 220 - age;
+        int maximumHeartRate;
+        maximumHeartRate = 220 - getAge();
         return maximumHeartRate;
     }
 
-    private int BMI;
+    public int upperBoundTargetHeartRate() {
+        return (80 * getMaximumHeartRate()) / 100;
+    }
 
-    public int getBMI() {
+    public int lowerBoundTargetHeartRate() {
+        return (50 * getMaximumHeartRate()) / 100;
+    }
+
+    public void getBMI() {
+        double BMI;
         BMI = weight / (height * height);
-        return BMI;
+        if (BMI < 18.5) {
+            System.out.printf ("BMI is %.2f %s%n", BMI, "You are Underweight");
+
+        }
+
+        if (BMI >= 18.5 && BMI <= 24.9) {
+            System.out.printf ("BMI is %.2f %s%n", BMI, "You are Normal");
+        }
+
+        if (BMI > 25 && BMI <= 29.9) {
+            System.out.printf ("BMI is %.2f %s%n", BMI, "You are Overweight");
+        }
+
+        if (BMI >= 30) {
+            System.out.printf("BMI is %.2f %s%n", BMI, "You are Obese");
+        }
     }
 }

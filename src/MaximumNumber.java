@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class MaximumNumber {
+public class MaximumNumber {
+
+    public MaximumNumber(String maximumNumber) {
+    }
 }

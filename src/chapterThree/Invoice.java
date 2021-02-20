@@ -1,5 +1,4 @@
 package chapterThree;
-
 public class Invoice{
 
     private String number;
@@ -53,9 +52,7 @@ public class Invoice{
 
     public double getInvoiceAmount(){
 
-        if(quantity < 0){
-            quantity = 0;
-            if(price < 0)
+        if(quantity <= 0){
                 price = 0;
         }
         invoiceAmount = quantity*price;

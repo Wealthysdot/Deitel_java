@@ -1,7 +1,5 @@
 package chapterSix;
 
-import chapterThree.Date;
-
 import java.util.Scanner;
 import java.util.Random;
 //import java.security.SecureRandom;

@@ -1,2 +1,4 @@
-package chapterSeven;public class WimpsArray {
+package chapterSeven;
+
+public class WimpsArray {
 }

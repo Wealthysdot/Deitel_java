@@ -27,7 +27,6 @@ public class Entry {
     }
 
 
-
     public void setEntryBody(String entryBody) {
         this.entryBody = entryBody;
 
@@ -38,15 +37,15 @@ public class Entry {
     }
 
     public String viewEntry() {
-        return ("Title: " +getEntryTitle()+"\n"
-                        + "Entry Date: "+ getEntryDateAndTime()
-                        .toLocalDate()+ "\n"
-                        +"Entry Body: "+ getEntryBody()
-                );
+        return ("Title: " + getEntryTitle() + "\n"
+                + "Entry Date: " + getEntryDateAndTime()
+                .toLocalDate() + "\n"
+                + "Entry Body: " + getEntryBody()
+        );
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return viewEntry();
     }
 }

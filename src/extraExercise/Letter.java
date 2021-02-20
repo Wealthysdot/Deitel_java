@@ -1,6 +1,11 @@
 package extraExercise;
+import java.util.Scanner;
 
-public class Grade {
+
+class LetterGrades
+{
+    public static void main(String[] args)
+    {
     int total = 0; // sum of grades
     int gradeCounter = 0; // number of grades entered
     int aCount = 0; // count of A grades
@@ -12,14 +17,13 @@ public class Grade {
     Scanner input = new Scanner(System.in);
 
          System.out.printf("%s%n%s%n %s%n %s%n",
-                 "Enter the integer grades in the range 0-100."
+                 "Enter the integer grades in the range 0-100.",
                  "Type the end-of-file indicator to terminate input:",
                  "On UNIX/Linux/Mac OS X type <Ctrl> d then press Enter",
                  "On Windows type <Ctrl> z then press Enter");
 
     // loop until user enters the end-of-file indicator
-         while(input.hasNext()
-                 )
+         while(input.hasNext())
 
     {
         int grade = input.nextInt(); // read grade
@@ -27,3 +31,4 @@ public class Grade {
         ++gradeCounter; // increment number of grades
     }
 }
+    }

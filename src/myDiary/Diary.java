@@ -20,4 +20,6 @@ public class Diary {
     public void addNewEntry(Entry newDiaryEntry) {
         entries[0]= newDiaryEntry;
     }
+
+
 }
