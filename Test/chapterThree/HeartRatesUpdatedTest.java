@@ -4,7 +4,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+//import static org.junit.jupiter.api.AssertTrue.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class HeartRatesUpdatedTest {
     HeartRatesUpdated newHeartRatesUpdated;
@@ -92,6 +94,44 @@ class HeartRatesUpdatedTest {
 
     @Test
     void testToWriteDateInAGivenFormat(){
+    newHeartRatesUpdated = new HeartRatesUpdated("Adunni", "Eagle", 31, 05,1994);
+        String stringedDate = newHeartRatesUpdated.toString();
+            assertEquals("1994/5/31", stringedDate);
 
     }
+
+    @Test
+    void testToCheckThatNegativeDayAreNotEntered(){
+        newHeartRatesUpdated = new HeartRatesUpdated("Adunni", "Eagle", 31, 05,1994);
+        newHeartRatesUpdated.setDayOfBirth(31);
+        newHeartRatesUpdated.setDayOfBirth(-5);
+        assertEquals(31,newHeartRatesUpdated.getDayOfBirth());
+        assertTrue(newHeartRatesUpdated.isNegativeValueEntered());
+        assertEquals("Please enter a positive number", newHeartRatesUpdated.getInputErrorMessage());
+
+    }
+
+    @Test
+    void testToCheckThatNegativeMonthAreNotEntered(){
+        newHeartRatesUpdated = new HeartRatesUpdated("Adunni", "Eagle", 31, 05,1994);
+        newHeartRatesUpdated.setMonthOfBirth(5);
+        newHeartRatesUpdated.setMonthOfBirth(-5);
+        assertEquals(5,newHeartRatesUpdated.getMonthOfBirth());
+        assertTrue(newHeartRatesUpdated.isNegativeValueEntered());
+        assertEquals("Please enter a positive number", newHeartRatesUpdated.getInputErrorMessage());
+
+    }
+
+//    @Test
+//    void testToCheckThatNegativeYearAreNotEntered(){
+//        newHeartRatesUpdated = new HeartRatesUpdated("Adunni", "Eagle", 31, 05,1994);
+//        newHeartRatesUpdated.setYearOfBirth(1994);
+//        newHeartRatesUpdated.setYearOfBirth(-1994);
+//        assertEquals(1994,newHeartRatesUpdated.getYearOfBirth());
+//        assertTrue(newHeartRatesUpdated.isNegativeValueEntered());
+//        assertEquals("Please enter a positive number", newHeartRatesUpdated.getInputErrorMessage());
+//
+//    }
+
+
 }

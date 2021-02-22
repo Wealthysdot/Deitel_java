@@ -31,6 +31,9 @@ class SmallestValueTest {
         assertEquals(10,newSmallestValue.getDigit());
     }
 
+
+
+
 //    @Test
 //    void testThatNegativeNumberCannotBeEntered(){
 //        newSmallestValue = new SmallestValue(5);
