@@ -122,16 +122,16 @@ class HeartRatesUpdatedTest {
 
     }
 
-//    @Test
-//    void testToCheckThatNegativeYearAreNotEntered(){
-//        newHeartRatesUpdated = new HeartRatesUpdated("Adunni", "Eagle", 31, 05,1994);
-//        newHeartRatesUpdated.setYearOfBirth(1994);
-//        newHeartRatesUpdated.setYearOfBirth(-1994);
-//        assertEquals(1994,newHeartRatesUpdated.getYearOfBirth());
-//        assertTrue(newHeartRatesUpdated.isNegativeValueEntered());
-//        assertEquals("Please enter a positive number", newHeartRatesUpdated.getInputErrorMessage());
-//
-//    }
+    @Test
+    void testToCheckThatNegativeYearAreNotEntered(){
+        newHeartRatesUpdated = new HeartRatesUpdated("Adunni", "Eagle", 31, 05,1994);
+        newHeartRatesUpdated.setYearOfBirth(1994);
+        newHeartRatesUpdated.setYearOfBirth(-1994);
+        assertEquals(1994,newHeartRatesUpdated.getYearOfBirth());
+        assertTrue(newHeartRatesUpdated.isNegativeValueEntered());
+        assertEquals("Please enter a positive number", newHeartRatesUpdated.getInputErrorMessage());
+
+    }
 
 
 }

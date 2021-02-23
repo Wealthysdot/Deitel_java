@@ -67,7 +67,7 @@ public class HeartRatesUpdated {
     }
 
     public void setYearOfBirth(int year) {
-        if (day < 0) {
+        if (year < 0) {
             isNegativeValueEntered = true;
         } else {
             this.year = year;
