@@ -33,14 +33,14 @@ class FilesProcessorTest {
     @Test
     public void isValidPathWithNullPath(){
         assertThrows(FileNotFoundException.class,
-                ()->FilesProcessor.isValidPath("null")
+                ()->FilesProcessor.isValid("null")
                 );
     }
 
     @Test
     public void isValidPathWithEmptyPath(){
         assertThrows(FileNotFoundException.class,
-                ()->FilesProcessor.isValidPath("")
+                ()->FilesProcessor.isValid("")
         );
     }
 
@@ -59,24 +59,19 @@ class FilesProcessorTest {
     public void isValidPathWithInvalidPath(){
         filePath = "C:/fakePath.txt"  ;
         assertThrows(FileNotFoundException.class,
-                ()->FilesProcessor.isValidPath(filPath)
+                ()->FilesProcessor.isValid(filePath)
         );
     }
 
     @Test
-    void getFileName(){
-        try{
-            String fileName = "Pent.txt";
-            String name = FileProcessor.getFileName(filPath);
-            assertNotNull(name);
-            assertTrue(name.equals(fileName));
-        } catch(FileNotFoundException ex){
-            System.err.println(ex.getMessage());
-            ex.printStackTrace();
-        }
+    void getFileName() throws FileNotFoundException {
+        String fileName = "Pent.txt";
+        String name = FilesProcessor.getFileName(fileName);
+        assertNotNull(name);
+        assertTrue(name.equals(fileName));
 
 
-       }
+    }
 
        @Test
     void playWithFileSystem(){
@@ -101,13 +96,13 @@ class FilesProcessorTest {
 //            e.printStackTrace();
 //    }
 
-    @Test
-    void createFil(){
-        try{
-            String filename = "C:/Pentax/pent.txt";
-            Formatter output = new
-        }
-    }
+//    @Test
+//    void createFil(){
+//        try{
+//            String filename = "C:/Pentax/pent.txt";
+////            Formatter output =
+//        }
+//    }
     }
 
 

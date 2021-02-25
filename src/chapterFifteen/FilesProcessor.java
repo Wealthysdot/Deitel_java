@@ -21,9 +21,9 @@ public class FilesProcessor {
         return result;
     }
 
-    public static String getFileName(String path){
+    public static String getFileName(String path) throws FileNotFoundException {
         String name = "";
-        if(isValidPath(path)){
+        if(isValid(path)){
             Path filePath = Paths.get(path);
             name = filePath.getFileName().toString();
         }
