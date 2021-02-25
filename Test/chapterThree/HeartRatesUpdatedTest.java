@@ -107,7 +107,7 @@ class HeartRatesUpdatedTest {
         newHeartRatesUpdated.setDayOfBirth(-5);
         assertEquals(31,newHeartRatesUpdated.getDayOfBirth());
         assertTrue(newHeartRatesUpdated.isNegativeValueEntered());
-        assertEquals("Please enter a positive number", newHeartRatesUpdated.getInputErrorMessage());
+        assertEquals("Invalid input", newHeartRatesUpdated.getInputErrorMessage());
 
     }
 
@@ -118,7 +118,7 @@ class HeartRatesUpdatedTest {
         newHeartRatesUpdated.setMonthOfBirth(-5);
         assertEquals(5,newHeartRatesUpdated.getMonthOfBirth());
         assertTrue(newHeartRatesUpdated.isNegativeValueEntered());
-        assertEquals("Please enter a positive number", newHeartRatesUpdated.getInputErrorMessage());
+        assertEquals("Invalid input", newHeartRatesUpdated.getInputErrorMessage());
 
     }
 
@@ -129,7 +129,7 @@ class HeartRatesUpdatedTest {
         newHeartRatesUpdated.setYearOfBirth(-1994);
         assertEquals(1994,newHeartRatesUpdated.getYearOfBirth());
         assertTrue(newHeartRatesUpdated.isNegativeValueEntered());
-        assertEquals("Please enter a positive number", newHeartRatesUpdated.getInputErrorMessage());
+        assertEquals("Invalid input", newHeartRatesUpdated.getInputErrorMessage());
 
     }
 
