@@ -1,11 +1,11 @@
-package whatever;
+package newChapterTwo.whatever;
 
 import java.util.Scanner;
 
 
 public class BMIApp {
     public static void main(String[] args) {
-        whatever.BMI newBMI = new whatever.BMI(0.0,0.0, 0);
+        BMI newBMI = new BMI(0.0,0.0, 0);
 
         Scanner input = new Scanner(System.in);
 

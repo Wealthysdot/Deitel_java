@@ -1,4 +1,4 @@
-package chapterTwo.whatever;
+package newChapterTwo.whatever;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BMITest {
-    whatever.BMI newBMI;
+    BMI newBMI;
 
     @BeforeEach
     void setUp() {
@@ -21,28 +21,28 @@ class BMITest {
 
     @Test
     void testThatWeightInKilogramIsEntered() {
-        newBMI = new whatever.BMI(65.7, 1.57, 0);
+        newBMI = new BMI(65.7, 1.57, 0);
         double weight = newBMI.getWeight();
         assertEquals(65.7, weight);
     }
 
     @Test
     void testThatHeightInMetersIsEntered() {
-        newBMI = new whatever.BMI(65.7, 1.57, 0);
+        newBMI = new BMI(65.7, 1.57, 0);
         double height = newBMI.getHeight();
         assertEquals(1.57, height);
     }
 
     @Test
     void testThatWeightCanBeUpdated() {
-        newBMI = new whatever.BMI(65.7, 1.57, 0);
+        newBMI = new BMI(65.7, 1.57, 0);
         newBMI.setWeight(50.0);
         assertEquals(50.0, newBMI.getWeight());
     }
 
     @Test
     void testThatHeightCanBeUpdated() {
-        newBMI = new whatever.BMI(65.7, 1.57, 0);
+        newBMI = new BMI(65.7, 1.57, 0);
         newBMI.setHeight(1.47);
         assertEquals(1.47, newBMI.getHeight());
     }
@@ -50,7 +50,7 @@ class BMITest {
     //  to test for the calculation of BMI
     @Test
     void toTestCalculationsForBMI() {
-        newBMI = new whatever.BMI(65.7, 1.57, 0);
+        newBMI = new BMI(65.7, 1.57, 0);
         newBMI.setWeight(45.0);
         newBMI.setHeight(1.89);
         double BMICalc = newBMI.calculatingBMI();
@@ -59,7 +59,7 @@ class BMITest {
 
     @Test
     void toCheckBMIValueMethod() {
-        newBMI = new whatever.BMI(65.7, 1.57, 0);
+        newBMI = new BMI(65.7, 1.57, 0);
         newBMI.setWeight(45.0);
         newBMI.setHeight(1.89);
         double BMICalc = newBMI.calculatingBMI();
@@ -70,7 +70,7 @@ class BMITest {
 
     @Test
     void testThatNegativeWeightNumberCannotBeEntered() {
-        newBMI = new whatever.BMI(65.7, 1.57, 0);
+        newBMI = new BMI(65.7, 1.57, 0);
         newBMI.setWeight(65.7);
         newBMI.setWeight(-65.7);
         assertEquals(65.7, newBMI.getWeight());
@@ -80,7 +80,7 @@ class BMITest {
 
     @Test
     void testThatNegativeHeightNumberCannotBeEntered(){
-        newBMI = new whatever.BMI(65.7, 1.57, 0);
+        newBMI = new BMI(65.7, 1.57, 0);
         newBMI.setHeight(1.57);
         newBMI.setHeight(-1.57);
         assertEquals(1.57, newBMI.getHeight());
