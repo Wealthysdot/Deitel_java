@@ -8,15 +8,6 @@ public class HeartRates {
     private int monthOfBirth;
     private int yearOfBirth;
 
-//    public HeartRates(String firstName, String lastName, int dayOfBirth, int monthOfBirth, int yearOfBirth, int presentYear) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.dayOfBirth = dayOfBirth;
-//        this.monthOfBirth = monthOfBirth;
-//        this.yearOfBirth = yearOfBirth;
-//
-//    }
-
     public HeartRates (){
 
     }
