@@ -43,7 +43,29 @@ class MileageUpdatedTest {
     }
 
     @Test
-    void testThatNegativeValuCannotBeEntered
+    void testThatNegativeValueOfGallonCannotBeEntered(){
+        newMileage.setGallon(10.5);
+        newMileage.setGallon(-6.5);
+        assertEquals(10.5, newMileage.getGallon());
+        assertTrue(newMileage.isNegativeValueInput());
+        assertEquals("Negative number entered", newMileage.getErrorMessage());
+    }
+
+
+    @Test
+    void testThatNegativeValueOfMilesCannotBeEntered(){
+        newMileage.setMiles(30);
+        newMileage.setMiles(-40);
+        assertTrue(newMileage.isNegativeValueInput());
+        assertEquals("Negative number entered",newMileage.getErrorMessage());
+    }
+
+    @Test
+    void testToCalculateMileage(){
+        newMileage.setMiles(60);
+        newMileage.setGallon(30);
+        assertEquals(2, newMileage.calculateMileage());
+    }
 
 
 
