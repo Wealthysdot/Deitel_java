@@ -28,25 +28,11 @@ public class MileageUpdated {
     }
 
     public void setMiles(double miles) {
-        if(miles < 0){
-            isNegativeValueInput = true;
-        }else {
+        if (miles > 0) {
             this.miles = miles;
         }
     }
 
-    public boolean isNegativeValueInput() {
-    return  isNegativeValueInput;
-
-    }
-
-    public String getErrorMessage() {
-        String message = " ";
-        if(isNegativeValueInput = true){
-            message = "Negative number entered";
-        }
-        return message;
-    }
 
     public double calculateMileage() {
         double mileage = miles/gallon;
