@@ -30,19 +30,4 @@ class SmallestValueTest {
         newSmallestValue.setDigit(10);
         assertEquals(10,newSmallestValue.getDigit());
     }
-
-
-
-
-//    @Test
-//    void testThatNegativeNumberCannotBeEntered(){
-//        newSmallestValue = new SmallestValue(5);
-//        newSmallestValue.setDigit(5);
-//        newSmallestValue.setDigit(-10);
-//        assertEquals(5, newSmallestValue.getDigit());
-//        assertTrue(newSmallestValue.isNegativeValueEntered());
-//        assertEquals("Please enter a positive number", newSmallestValue.getInputErrorMessage());
-//    }
-
-
 }
