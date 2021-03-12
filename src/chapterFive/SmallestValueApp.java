@@ -1,44 +1,39 @@
-//package chapterFive;
-//
-//import java.util.Scanner;
-//
-//public class SmallestValueApp {
-//    public static void main(String[] args) {
-//        SmallestValue newSmallestValue = new SmallestValue(0);
-//
-//
-//
-//        Scanner input = new Scanner(System.in);
-//
-//        System.out.println("Enter Digit: ");
-//        int digit = input.nextInt();
-//
-//
-//        System.out.println("Enter Digit: ");
-//        int temp = input.nextInt();
-//
-//        for(int i = 0; i <= digit; i++){
-//
-//        }
-//
-////        while (!input.nextLine().equals("end")){
-//
-//            System.out.println("Enter Digit: ");
-//            digit = input.nextInt();
-//
-//
-//            System.out.println("Enter Digit: ");
-//            temp = input.nextInt();
-//        }
-//
-//        if (digit > temp){
-//            System.out.println(digit + "is lesser than" + temp);
-//        } else {
-//            System.out.println(temp + "is greater than" + digit);
-//        }
-//
-//
-//
-//    }
-//
-//}
+package chapterFive;
+
+import java.util.Scanner;
+
+public class SmallestValueApp {
+    public static void main(String[] args) {
+        SmallestValue newSmallestValue = new SmallestValue(0);
+
+
+        Scanner input = new Scanner(System.in);
+        int smallest = 0;
+        int number = 0;
+        int integers;
+
+        System.out.print("Enter number of integers: ");
+        integers = input.nextInt();
+
+        for (int counter = 1; counter <= integers; counter++) {
+            System.out.print("Enter integer: ");
+            number = input.nextInt();
+
+            if (counter == 1)
+                smallest = number;
+            else if (number < smallest)
+                smallest = number;
+        }
+        System.out.printf( "Smallest Integer is: %d\n", smallest );
+
+
+
+    }
+}
+
+
+
+
+
+
+
