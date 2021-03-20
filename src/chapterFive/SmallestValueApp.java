@@ -9,7 +9,7 @@ public class SmallestValueApp {
 
         Scanner input = new Scanner(System.in);
         int smallest = 0;
-        int number = 0;
+        int number;
         int integers;
 
         System.out.print("Enter number of integers: ");
