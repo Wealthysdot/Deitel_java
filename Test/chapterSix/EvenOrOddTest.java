@@ -18,17 +18,23 @@ class EvenOrOddTest {
     @AfterEach
     void tearDown() {
     }
-
     @Test
-    void testToCheckTheStatusOfNumber(){
-        int num = evenOrOdd.getEven();
-        assertTrue(true);
+    void testThatNumberCanEntered(){
+        evenOrOdd.setNumber(4);
+        assertEquals(4,evenOrOdd.getNumber());
+
+    }
+    @Test
+    void testToCheckIfNumberIsEven(){
+        assertTrue(evenOrOdd.getEven());
     }
 
-//    @Test
-//    void testToCheckNumberCanBeUpdated(){
-//
-//    }
+    @Test
+    void testToCheckIfNumberIsOdd(){
+        evenOrOdd.setNumber(5);
+        assertFalse(evenOrOdd.getEven());
+    }
+
 
 
 }

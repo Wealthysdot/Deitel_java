@@ -8,12 +8,21 @@ public class EvenOrOdd {
         this.num = num;
     }
 
-    public int getEven() {
-        if(num % 2 == 0)
-            System.out.println(true);
+    public boolean getEven() {
+        if(num % 2 == 0){
+            return true;
+        }
         else
-            System.out.println(false);
+            return false;
 
+
+    }
+
+    public void setNumber(int num) {
+        this.num = num;
+    }
+
+    public int getNumber() {
         return num;
     }
 }
